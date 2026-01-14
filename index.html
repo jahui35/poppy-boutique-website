@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Petal Studio – Inspired</title>
+  <style>
+    /* === Custom CSS Variables (Utility-First Friendly) === */
+    :root {
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --text-color: #1a1a1a;
+      --text-muted: #666;
+      --bg-color: #fff;
+      --border-color: #eaeaea;
+      --spacing-xs: 0.25rem;
+      --spacing-sm: 0.5rem;
+      --spacing-md: 1rem;
+      --spacing-lg: 2rem;
+      --radius-sm: 4px;
+      --shadow-card: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      padding: var(--spacing-lg);
+      line-height: 1.5;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: var(--spacing-lg);
+      max-width: 1200px;
+    }
+
+    .product-card {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: var(--spacing-md);
+      background: white;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .product-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .price-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xs);
+    }
+
+    .regular-price,
+    .sale-price {
+      font-size: 0.9375rem;
+    }
+
+    .regular-price-original {
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+
+    .regular-price-sale,
+    .sale-price {
+      color: var(--text-color);
+      font-weight: 600;
+    }
+
+    .unit-price {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <h2 class="section-title">Shop Bestsellers</h2>
+
+  <div class="product-grid">
+    
+    <!-- Product 1: Rose Prairie -->
+    <div class="product-card">
+      <h3 class="product-title">Rose Prairie</h3>
+      <div class="price-wrapper">
+        <span class="regular-price">
+          <span class="regular-price-original">Regular price $68.00 SGD</span>
+          <br/>
+          <span class="regular-price-sale">Sale price From $68.00 SGD</span>
+        </span>
+        <span class="unit-price">Unit price / per</span>
+      </div>
+    </div>
+
+    <!-- Product 2: Birthday Cake -->
+    <div class="product-card">
+      <h3 class="product-title">Birthday Cake</h3>
+      <div class="price-wrapper">
+        <span class="regular-price">
+          Regular price $158.00 SGD
+        </span>
+        <span class="unit-price">Unit price / per</span>
+      </div>
+    </div>
+
+    <!-- Add more products as needed -->
+    <div class="product-card">
+      <h3 class="product-title">Wild Bloom</h3>
+      <div class="price-wrapper">
+        <span class="regular-price">
+          <span class="regular-price-original">Regular price $92.00 SGD</span>
+          <br/>
+          <span class="regular-price-sale">Sale price From $78.00 SGD</span>
+        </span>
+        <span class="unit-price">Unit price / per</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
